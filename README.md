@@ -4,6 +4,19 @@ Nix flake packaging the [ProB 1.16.1](https://prob.hhu.de/w/index.php/Download) 
 
 ## Usage
 
+If you don't have Nix yet, install it and enable flakes:
+
+```sh
+# Install Nix (multi-user installation)
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
+
+# Enable the nix command and flakes
+mkdir -p ~/.config/nix
+echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+```
+
+Open a new shell so Nix is on your `PATH`, then run:
+
 ```sh
 nix shell github:Quoteme/probcli
 ```
